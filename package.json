@@ -1,0 +1,40 @@
+{
+  "name": "vite-plugin-version-output",
+  "version": "0.0.3",
+  "description": "Automatically insert the version in your project",
+  "keywords": [
+    "log",
+    "version",
+    "plugin",
+    "vite"
+  ],
+  "author": "MicLon <jcnd@163.com>",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./*": "./*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mic1on/vite-plugin-version-output.git"
+  },
+  "homepage": "https://github.com/mic1on/vite-plugin-version-output.git",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format cjs,esm"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.3",
+    "tsup": "^6.3.0",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.8"
+  }
+}
